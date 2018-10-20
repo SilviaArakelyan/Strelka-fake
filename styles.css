@@ -1,0 +1,384 @@
+@import "reset.css";
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&subset=cyrillic-ext'); */
+
+@font-face {
+ font-family: "FugueMono";
+
+ src: url("FugueMono.woff2") format("woff2")
+}
+@font-face {
+ font-family: "FugueRegular";
+
+ src: url("FugueRegular.woff2") format("woff2")
+}
+
+
+
+body {
+  color: #fff;
+
+  font-family: "FugueRegular";
+
+  -webkit-font-smoothing: antialiased; /* сглаживание шрифтов */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* СЕКЦИЯ _______________1_______________ */
+
+.section1 {
+  position: relative; /* match для nav */
+
+  display: flex;
+
+  height: 80vh;
+  min-height: 400px;
+
+  background-image: url("strelka1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center; /* самый попсовый способ выровнять по центру */
+}
+
+
+nav {
+  position: absolute; /* выпадение из потока */
+  top: 20px;
+  right: 0;
+  left: 0;
+
+  width: 960px; /* задаем размер */
+  height: 40px;
+  margin: 25px auto 0;
+
+  background-color: #006AFF;
+
+}
+
+nav ul {
+  display: flex;
+
+  padding: 12px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  font-family: "FugueMono";
+  font-size: 14px;
+
+  justify-content: space-between;
+}
+
+
+a {
+  text-decoration: none;
+
+  color: #fff
+}
+
+a:hover {
+  color: black;
+}
+
+
+input {
+  width: 50px;
+  /* margin-top: -20px; */
+  padding: 0;
+
+  text-transform: uppercase;
+
+  color: #fff;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+h1 { /* Гонконг: мусорный остров */
+text-align: center;
+
+font-size: 110px;
+line-height: 125px;
+}
+
+
+.more-btn {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  /* width: 150px; */
+
+  margin: 0 auto;
+}
+
+
+p { /* общие настройки к тексту в more под каждой секцией */
+text-align: center;
+
+color: black;
+
+font-size: 27px;
+line-height: 32px;
+}
+p a {
+  padding: 4px 6px 2px 6px; /* общие настройки к ссылке в more*/
+
+  color: #006AFF;
+  background-color: white;
+}
+p a:hover {
+  color: white;
+  background-color: #006AFF;
+
+}
+
+
+.more-btn a {
+  color: white;
+  background-color: #006AFF;
+}
+.more-btn a:hover {
+  color: #006AFF;
+  background-color: white;
+}
+.more-btn p {
+  color: white;
+}
+
+
+/* СЕКЦИЯ _______________2_______________ */
+
+.section2  {
+  display: flex;
+
+  min-height: 640px;
+}
+
+.bubble-left {
+  display: flex;
+  overflow: hidden;
+
+  width: 50%;
+
+  background-image: url("strelka-left.jpg");
+  background-position: center;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble-right {
+  display: flex;
+  overflow: hidden;
+
+  width: 50%;
+
+  background-image: url("strelka-right.jpg");
+  background-position: center;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center;
+}
+
+ .bubble-left a {
+  padding: 46px 36px 53px;
+
+  text-align: center;
+
+  color: red;
+  background-color: white;
+
+  font-size: 43px;
+  line-height: 46px;
+
+}
+
+.bubble-right a {
+ padding: 46px 36px 53px;
+
+ text-align: center;
+
+ color: white;
+ background-color: red;
+
+ font-size: 43px;
+ line-height: 46px;
+
+}
+
+.bubble-left a:hover {
+color: white;
+background-color: red;
+}
+
+.bubble-right a:hover {
+color: red;
+background-color: white;
+}
+
+
+/* СЕКЦИЯ _______________3_______________ */
+
+.roller {
+min-height: 640px;
+
+background-color: #006AFF;
+
+}
+
+.logo {
+  display: flex;
+
+  justify-content: center;
+}
+
+.logo a {
+  display: flex;
+
+  width: 384px;
+  height: 136px;
+  margin-top: 40px;
+
+  background-image: url(strelka-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 -251px;
+}
+.logo a:hover {
+  background-position: 0 -387px;
+}
+
+.roller-pressroller {
+display: flex;
+overflow: scroll;
+
+min-height: 412px;
+
+align-items: center;
+}
+
+img { /* контейнер для фоток. сами картинки в html */
+width: 219px;
+height: 340px;
+margin: 10px;
+}
+
+
+/* СЕКЦИЯ _______________4_______________ */
+
+.slide {
+  display: flex;
+
+  width: auto;
+  height: 320px;
+
+  background-image: url(slide.jpg);
+  background-position: center;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.slide p {
+height: 28pt;
+margin: 15pt auto;
+
+color: white;
+}
+
+.slide p a {
+color: white;
+background-color: #006AFF;
+}
+
+.slide p a:hover {
+  color: #006AFF;
+  background-color: white;
+}
+
+
+/* СЕКЦИЯ _______________5_______________ */
+
+.mod {
+  position: relative;
+
+  display: flex;
+
+  height: 260pt;
+
+  background-image: url(strelka-bar.png);
+  background-position: center;
+  background-size: cover;
+
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 30pt;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: "FugueRegular";
+  font-size: 27px;
+  line-height: 32px;
+
+}
+
+.mod p {
+  position: absolute;
+
+  margin-top: 216pt;
+
+  color: white;
+}
+
+.mod a {
+  color: white;
+  background-color:#006AFF;
+}
+
+.mod a:hover {
+  color: #006AFF;
+  background-color: white;
+}
+
+
+/* СЕКЦИЯ _______________6_______________ */
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  height: 881pt;
+
+  background: url(strelka-bg.png) center -3px repeat;
+
+  align-items: center;
+}
+.footer, .sponsors {
+  display: flex;
+
+  width: 956pt;
+  margin-top: 17pt;
+
+  background-color: #ebebeb;
+}
+
+.footer {
+height: 499pt;
+}
+
+.sponsors {
+height: 139pt
+}
